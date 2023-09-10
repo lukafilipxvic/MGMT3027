@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-st.header("🏢 Organisation Plan")
+st.header("🏢 Organisation Plan", divider="grey")
 st.subheader("Key Value Creation and Management Structure")
 st.markdown('''
 Horizon’s key value activities:

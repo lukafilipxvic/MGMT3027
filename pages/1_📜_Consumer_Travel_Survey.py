@@ -5,12 +5,12 @@ import streamlit.components.v1 as components
 
 st.set_page_config(
     layout="centered",
-    page_title="Consumer Survey",
+    page_title="Consumer Travel Survey",
     page_icon="📜",
     initial_sidebar_state="auto",
 )
 
-st.header("📜 Consumer Survey")
+st.header("📜 Consumer Travel Survey", divider="grey")
 st.subheader("We started with finding the :red[problem], not the :blue[solution.]")
 st.write("The team first surveyed travel consumers to find a problem worth solving.")
 

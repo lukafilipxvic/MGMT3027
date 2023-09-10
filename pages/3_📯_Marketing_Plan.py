@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-st.header("📯 Marketing Plan")
+st.header("📯 Marketing Plan", divider="grey")
 st.subheader("Target Segmentations and Value Propositions")
 st.markdown('''
 Among our identified customer segments, university students and student backpackers stand out as those most likely to embark on spontaneous trips, seeking the convenience of an adjustable itinerary. They are the demographic most likely to spread the word of a new AI product and benefit from an interactive itinerary app. Their input into the Pilot versions of the algorithm will benefit the R&D of the application the most due to diverse interests and willingness to engage with new products.

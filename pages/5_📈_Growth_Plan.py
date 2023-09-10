@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-st.header("📈 Growth Plan")
+st.header("📈 Growth Plan", divider="grey")
 st.markdown('''
 The first 6-months of growth targets the development of the Horizon’s AI IP, pilot locations to test the app within set parameters, and marketing to two key customer segmentations to gauge interest in the Horizon product. This is detailed in the 6 Month Operation Plan below.
 ''')

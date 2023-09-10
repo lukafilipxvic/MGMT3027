@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-st.header("💰 Financials Plan")
+st.header("💰 Financials Plan", divider="grey")
 st.subheader("Key Resources")
 st.markdown('''
 The first priority is server space, obtainable through a free 12-month trial with Amazon Web Services (AWS) in Australia, estimated at a conservative \$0.2 per month for 100,000 active requests post-trial. This server space is crucial, offering over 2GB of requests per user. The risk is when AWS increases the cost per user as Horizon grows.\n
@@ -16,7 +16,7 @@ Another key resource is hiring AI engineer(s) with a budgeted cost of around \$8
 To effectively launch our pilot product, we have allocated a \$30,000 marketing budget to target specific locations in line with our growth plan. This includes collaboration with local government departments and business suppliers. Our budgeting is conservative, estimated at \$6 per user cost, through API scraping costs and payment charges that include GST.\n
 ''')
 st.divider()
-st.subheader("Budget")
+st.subheader("Budget and Pricing")
 st.markdown('''
 An initial raising of \$200,000 in capital for the first 12 months of operations would meet the \$134,000 fixed budget cost and allow for upfront cashflow as we generate users. This is crucial for establishing competitiveness in the travel market, and understanding subscription models require a high amount of seed capital before they are cash flow positive.\n
 To monetise our venture, we plan to offer a free model to attract younger segments, like students and adults. They will explore our AI assistant’s capabilities, increasing our active user base and conversions to paid users. For long-term subscriptions, users can pay \$7.99 AUD monthly or opt for six or 12-month advance payments at \$6.99 AUD. These pricing options enhance our cash flow and increase our expansion budgeting.\n
