@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-st.header("💡 MGMT3027")
-st.write("A simple app for students to use")
+st.header("💡 Summary - Horizon")
+st.write("Itinerary and budget agent for travellers.")
 
 hide_st.footer()
