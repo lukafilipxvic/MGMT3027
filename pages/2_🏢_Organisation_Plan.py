@@ -32,9 +32,8 @@ st.markdown('''
 ''')
 st.divider()
 st.markdown('''
-While we possess key skills as shown in the organizational structure, we recognize the need for industry-specific commercial experience. To address this, we are open to offering an increased equity stake to individuals who can guide Horizon through the post-pilot stages and with Travel industry experience.
-
-Strategically, we intend to target regional travel networks like Visit Canberra. This will allow us to apply for government grants, increasing revenue and reducing pilot costs. Partnering with local tourism hubs, such as hotels and locally owned businesses, will help rapidly expand Horizon's brand awareness. This approach positions our product as a complementary product, encouraging interactions and data sharing, like how pubs and cafes display labels to signify their relationship with local Australian products.
+Strategically, we intend to target regional travel networks like Visit Canberra. This will allow us to apply for government grants, increasing revenue and reducing pilot costs. Partnering with local tourism hubs, such as hotels and locally owned businesses, will help rapidly expand Horizon's brand awareness.\n
+This approach positions our product as a complementary product, encouraging interactions and data sharing, like how pubs and cafes display labels to signify their relationship with local Australian products.
 ''')
 st.divider()
 

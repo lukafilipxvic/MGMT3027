@@ -16,17 +16,15 @@ Among our identified customer segments, university students and student backpack
 st.image('images/customer-vp.png')
 
 st.markdown('''
-Our secondary and most profitable market segmentation is young double-income households, often comprised of families with children. The value proposition of an application that can streamline itinerary creation and bookings is justified to the Gen X demographic
+Our secondary and most profitable market segmentation is young double-income households, often comprised of families with children. The value proposition of an application that can streamline itinerary creation and bookings is justified to the Gen X demographic.
 ''')
+
 st.divider()
+
 st.subheader("Horizon Customer and Supplier Positioning")
 st.markdown('''
-Our positioning strategy revolves around offering a complementary service to travel rather than a substitute for their current travel planning. Marketing research has found that emphasising an AI’s ability to interact with customers’ emotional drivers enhances marketing retention (Huang, 2021). The personal nature of the tailored AI itinerary it generates creates a sunk cost proposition in the user's mind.
-''')
-st.markdown('''
-The feeling of the itinerary aligning with the individual’s tastes and preferences increases retention and perceived value. This approach generates high customer satisfaction by eliminating the friction often associated with misunderstandings or discomfort in sharing personal preferences and experiences with a person (Huang, 2021).
-''')
-st.markdown('''
+Our positioning strategy revolves around offering a complementary service to travel rather than a substitute for their current travel planning. Marketing research has found that emphasising an AI’s ability to interact with customers’ emotional drivers enhances marketing retention (Huang, 2021). The personal nature of the tailored AI itinerary it generates creates a sunk cost proposition in the user's mind.\n
+The feeling of the itinerary aligning with the individual’s tastes and preferences increases retention and perceived value. This approach generates high customer satisfaction by eliminating the friction often associated with misunderstandings or discomfort in sharing personal preferences and experiences with a person (Huang, 2021).\n
 The app is a dynamic ecosystem where consumers actively contribute to value co-creation, enriching the travel experience for all users through past uses. As we move forward, user feedback and validation, particularly during the pilot phase, will refine and enhance the central algorithm. This feedback loop will be instrumental in shaping our ongoing development efforts and guiding our marketing strategies. 
 ''')
 st.divider()

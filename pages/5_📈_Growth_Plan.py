@@ -24,7 +24,7 @@ st.subheader("Potential growth markets")
 st.markdown('''
 Both market size of travel planner apps and Generative AI in travel market are expected to dramatically grow by 2032. This is due to the technological development of AI, which allows for personalized travel plans, people of all ages highly trust AI recommendations. About 73% of users trust content provided by AI.''')
 st.image('images/travel-app-market.png', caption="Global Travel Planner App Market")
-st.image('images/gen-ai-market.png', caption="Generative AI in Travel Market")
+st.image('images/gen-ai-market.jpg', caption="Generative AI in Travel Market")
 st.divider()
 st.subheader("Investor Offer")
 st.markdown('''
