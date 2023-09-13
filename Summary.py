@@ -10,12 +10,12 @@ st.set_page_config(
 
 st.header("🌐 Horizon - Travel Itinerary and Budget App", divider="grey")
 st.subheader(":red[Problem : ] Travel planning and budgeting is hard with current apps.")
-st.markdown('''The problem:\n
+st.markdown('''The problem is:\n
 1. affecting +10M travellers (potential customers);
 2. growing at a fast pace (+18.2% CAGR) 
-3. trying to solve it right now
+3. trying to be solved it right now
 ''')
-st.subheader(":blue[Solution : ] Horizon is a personalised itinerary and budget agent for travellers.")
+st.subheader(":blue[Solution : ] Horizon is a personalised AI itinerary and budget agent for travellers.")
 
 st.divider()
 
@@ -32,7 +32,7 @@ st.markdown('''
 **:blue[Founders : ]** The team of four share prior experience in developing software and know what is needed for the consumers.\n
 **:green[Market : ]** The problem is in the right space, high growth = high +Δ demand \n
 **:orange[Product : ]** 10x better than the competition due to underlying intellectual property.
-**:red[Acquisition :]** Will we spend ~$0 in acquiring customers due our to strong value proposition
+**:red[Acquisition :]** Will we spend ~$0 in acquiring customers due our to strong value proposition.
 ''')
 
 hide_st.footer()
