@@ -33,7 +33,7 @@ st.markdown('''
 **:green[Market : ]** The problem is in the right space, high growth = high +Δ demand \n
 **:orange[Product : ]** 10x better than the competition due to underlying intellectual property. \n
 **:red[Acquisition :]** Will we spend ~$0 in acquiring customers due our to strong value proposition \n
-**:red[Monopoly :]** The more users using Horizon, the stronger our data and recommendations become
+**:purple[Monopoly :]** The more users using Horizon, the stronger our data and recommendations become
 ''')
 
 hide_st.footer()
