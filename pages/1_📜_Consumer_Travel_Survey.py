@@ -14,7 +14,11 @@ st.header("📜 Consumer Travel Survey", divider="grey")
 st.subheader("We started with finding the :red[problem], not the :blue[solution.]")
 st.markdown('''
 The team first surveyed travel consumers to find a problem worth solving.\n
-Findings of the survey **shows demand** for simpler budgeting tools and a more personalised itinerary planner.
+Findings of the survey **shows demand** for simpler budgeting tools and a more personalised itinerary planner. \n
+- **Customers value ease of use and price comparison** the most.
+- Main challenge experienced is **estimating costs of travelling**. 
+- **62% of surveyed customers** would **trust AI** to recommend activities.
+
 Hence, we persuit solving the problem.
 ''')
 

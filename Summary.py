@@ -1,4 +1,5 @@
 import streamlit as st
+from linkedin import linkedin_profiles
 import hide_st
 
 st.set_page_config(
@@ -35,5 +36,9 @@ st.markdown('''
 **:red[Acquisition :]** Will we spend ~$0 in acquiring customers due our to strong value proposition \n
 **:violet[Monopoly :]** The more users using Horizon, the stronger our data and recommendations become
 ''')
+st.write("#")
+
+st.subheader("The Horizon Team", divider=True)
+linkedin_profiles("yamato-takahashi-a73b65231", "ben-scanlon-b13667227", "lukafilipxvic", "max-rupert-1812481b0")
 
 hide_st.footer()

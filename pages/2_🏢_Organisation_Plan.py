@@ -1,4 +1,5 @@
 import streamlit as st
+from linkedin import linkedin_profiles
 import hide_st
 
 st.set_page_config(
@@ -12,12 +13,18 @@ st.header("🏢 Organisation Plan", divider="grey")
 st.subheader("Key Value Creation and Management Structure")
 st.markdown('''
 Horizon’s key value activities:
-1.	Focus on AI technology development. Building sophisticated algorithms to power personalized itineraries and real-time recommendations.
-2.	Managing data harvesting, server hosting and API scraping to ensure up-to-date information.
-3.	Marketing and customer acquisition efforts to expand both supplier and consumer users.
-4.	An integrated booking system to streamline flights, insurance, and accommodation transactions, enhancing the travel planning value capture.
+1.	**Focus on AI technology development.** Building sophisticated algorithms to power personalized itineraries and real-time recommendations.
+2.	**Managing data harvesting**, server hosting and API scraping to ensure up-to-date information.
+3.	**Marketing and customer acquisition** efforts to expand both supplier and consumer users.
+4.  An **integrated booking system** to streamline flights, insurance, and accommodation transactions, enhancing the travel planning value capture.
+5.  **Automated budget/cost estimator** based on duration, cost of destination and other key factors.
 ''')
-st.divider()
+
+
+st.subheader("The Horizon Team", divider=True)
+linkedin_profiles("yamato-takahashi-a73b65231", "ben-scanlon-b13667227", "lukafilipxvic", "max-rupert-1812481b0")
+
+st.write("#")
 st.image('images/org-structure.png', caption="Horizon Organisational Structure")
 
 st.markdown('''
