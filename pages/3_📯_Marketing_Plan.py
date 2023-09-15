@@ -33,4 +33,5 @@ st.image('images/competitors.png')
 st.markdown('''
 Horizons brand must become synonymous with fast travel information and AI booking assistance. This is a market gap identified in the competitor analysis table above. The flexibility of AI assistance will allow Horizons to position itself as more accessible and streamlined than specialised travel websites. Further, booking functions and a payment portal will allow Horizon AI to edge out AI competitors that are restricted from these tasks.
 ''')
+
 hide_st.footer()

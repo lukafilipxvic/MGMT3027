@@ -33,13 +33,12 @@ st.markdown('''
 **:blue[Founders : ]** The team of four share prior experience in developing software and know what is needed for the consumers \n
 **:green[Market : ]** The problem is in the right space, high growth = high demand \n
 **:orange[Product : ]** 10x better than the competition due to underlying intellectual property \n
-**:red[Acquisition :]** Will we spend ~$0 in acquiring customers due our to strong value proposition \n
-**:violet[Monopoly :]** The more users using Horizon, the stronger our data and recommendations become
+**:red[Acquisition :]** Spending ~$0 to acquire customers due our to strong value proposition \n
+**:violet[Monopoly :]** The more travelers using Horizon, the stronger our data and recommendations become
 ''')
 st.divider()
 
 st.subheader("The Horizon Team", divider=True)
-
 
 linkedin_profiles("yamato-takahashi-a73b65231", "ben-scanlon-b13667227", "lukafilipxvic", "max-rupert-1812481b0")
 
