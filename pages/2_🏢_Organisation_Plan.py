@@ -73,7 +73,7 @@ st.write("")
 st.subheader("The Horizon Team", divider=True)
 linkedin_profiles("yamato-takahashi-a73b65231", "ben-scanlon-b13667227", "lukafilipxvic", "max-rupert-1812481b0")
 
-st.write("#")
+st.write("")
 st.image('images/org-structure.png', caption="Horizon Organisational Structure")
 
 st.markdown('''

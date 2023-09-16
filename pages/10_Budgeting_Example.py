@@ -4,7 +4,7 @@ import pandas as pd
 
 st.set_page_config(
     layout="centered",
-    page_title="Budgeting Test",
+    page_title="Budgeting Example",
     page_icon="💡",
     initial_sidebar_state="auto",
 )
@@ -26,7 +26,7 @@ st.header("💡 Budgeting Example", divider="grey")
 
 city_origin = st.selectbox('Select origin', options=cities, placeholder="Select origin", help="If city not found, select the nearest applicable one.")
 city_destination = st.multiselect('Select destination', options=cities, default=None, placeholder="Select destination/s", help="If city not found, select the nearest applicable one.")
-st.divider()
+st.write("")
 
 # Assuming `df` is the DataFrame containing the data
 selected_cities = [city_origin] + city_destination
