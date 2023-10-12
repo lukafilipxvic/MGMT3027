@@ -1,5 +1,7 @@
 import streamlit as st
+from streamlit_extras.grid import grid
 import hide_st
+import datetime
 import pandas as pd
 
 st.set_page_config(
@@ -21,34 +23,56 @@ def read_cities(ttl=3600):
 
 df = pd.read_csv("data/cost_of_living.csv", encoding="latin-1")
 cities = read_cities()
+canberra_index = cities.index("Canberra, Australia")
+
+today = datetime.datetime.now()
+todayplusweek = today + datetime.timedelta(weeks=1)
 
 st.header("💡 Budgeting Example", divider="grey")
 
-city_origin = st.selectbox('Select origin', options=cities, placeholder="Select origin", help="If city not found, select the nearest applicable one.")
-city_destination = st.multiselect('Select destination', options=cities, default=None, placeholder="Select destination/s", help="If city not found, select the nearest applicable one.")
-st.write("")
+grid = grid([1, 1.5], [1, 1], [0.6, 1, 1], vertical_align="bottom")
 
-# Assuming `df` is the DataFrame containing the data
-selected_cities = [city_origin] + city_destination
-comparison_df = df[df['City'].isin(selected_cities)][['City', 'Groceries Index', 'Restaurant Price Index']]
+col1, col2 = st.columns([1, 1])
 
+city_origin = grid.selectbox('Select origin', index=canberra_index,
+    options=cities, placeholder="Select origin",
+    help="If city not found, nearest suitable alternative.")
+city_destination = grid.multiselect('Select destination',
+    options=cities, default=None,
+    placeholder="Select destination/s",
+    help="If city not found, nearest suitable alternative.")
 
-# Calculate the differences in prices
-groceries_index_origin = df[df['City'] == city_origin]['Groceries Index'].values[0]
-restaurant_index_origin = df[df['City'] == city_origin]['Restaurant Price Index'].values[0]
+departure_date = grid.date_input("Select departure date",
+    (today), today,format="DD/MM/YYYY")
+return_date = grid.date_input("Select return date",
+    (todayplusweek), today,format="DD/MM/YYYY")
 
-for city in city_destination:
-    groceries_index_destination = df[df['City'] == city]['Groceries Index'].values[0]
-    restaurant_index_destination = df[df['City'] == city]['Restaurant Price Index'].values[0]
+people = grid.number_input("Number of adults", 1, 25, step=1)
 
-    groceries_difference = groceries_index_destination - groceries_index_origin
-    restaurant_difference = restaurant_index_destination - restaurant_index_origin
+flights = grid.number_input(label="Flight costs ($)", step=1)
 
-    st.markdown(f'''
-    In {city.split(',')[0]}:\n
-    Groceries are **{groceries_difference:.2f}% {'more' if groceries_difference > 0 else 'less'} expensive** than in {city_origin.split(',')[0]}.\n
-    Restaurants are **{restaurant_difference:.2f}% {'more' if restaurant_difference > 0 else 'less'} expensive** than in {city_origin.split(',')[0]}.\n
-    ''')
-    st.write("")
+if grid.button("🔍") and city_destination != []:
+    # Assuming `df` is the DataFrame containing the data
+    selected_cities = [city_origin] + city_destination
+    comparison_df = df[df['City'].isin(selected_cities)][['City', 'Groceries Index', 'Restaurant Price Index']]
 
+    # Calculate the differences in prices
+    groceries_index_origin = df[df['City'] == city_origin]['Groceries Index'].values[0]
+    restaurant_index_origin = df[df['City'] == city_origin]['Restaurant Price Index'].values[0]
+
+    for city in city_destination:
+        groceries_index_destination = df[df['City'] == city]['Groceries Index'].values[0]
+        restaurant_index_destination = df[df['City'] == city]['Restaurant Price Index'].values[0]
+
+        groceries_difference = groceries_index_destination - groceries_index_origin
+        restaurant_difference = restaurant_index_destination - restaurant_index_origin
+
+        st.markdown(f'''
+        In {city.split(',')[0]}:\n
+        Groceries are **{groceries_difference:.2f}% {'more' if groceries_difference > 0 else 'less'} expensive** than in {city_origin.split(',')[0]}.\n
+        Restaurants are **{restaurant_difference:.2f}% {'more' if restaurant_difference > 0 else 'less'} expensive** than in {city_origin.split(',')[0]}.\n
+        ''')
+        st.write("")
+else:
+    st.toast("No destination selected.")
 hide_st.footer()

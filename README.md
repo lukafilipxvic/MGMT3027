@@ -1,4 +1,4 @@
 # MGMT3027
 Entrepreneurship and Innovation 
 
-Github repository for our startup idea: Horizon.
+Repository for our startup idea: Horizon.

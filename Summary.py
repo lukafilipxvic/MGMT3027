@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 from linkedin import linkedin_profiles
 import hide_st
 
@@ -25,6 +26,16 @@ st.markdown('''
 Horizon is an **AI travel assistant and budgeting app.** It researches destinations *on the horizon* and provides a structured itinerary that adapts to customer preferences.\n
 The app will use API scraping and web-sharing technology to allow subscribed users to book experiences, find value deals for their travel budget, and change those bookings through the central AI.
 ''')
+col1, col2 = st.columns([1, 1])
+
+go_to_itinerary = col1.button("Test the Itinerary App", use_container_width=True)
+if go_to_itinerary:
+    switch_page("itinerary example")
+
+go_to_budget = col2.button("Test the Budgeting App", use_container_width=True)
+if go_to_budget:
+    switch_page("budgeting example")
+
 st.divider()
 
 st.subheader("Our insight / Unfair Advantages related to growth")
