@@ -51,7 +51,7 @@ people = grid.number_input("Number of adults", 1, 25, step=1)
 
 flights = grid.number_input(label="Flight costs ($)", step=1)
 
-if grid.button("🔍") and city_destination != []:
+if grid.button("🔍 Budget the horizon") and city_destination != []:
     # Assuming `df` is the DataFrame containing the data
     selected_cities = [city_origin] + city_destination
     comparison_df = df[df['City'].isin(selected_cities)][['City', 'Groceries Index', 'Restaurant Price Index']]
@@ -60,7 +60,9 @@ if grid.button("🔍") and city_destination != []:
     groceries_index_origin = df[df['City'] == city_origin]['Groceries Index'].values[0]
     restaurant_index_origin = df[df['City'] == city_origin]['Restaurant Price Index'].values[0]
 
-    for city in city_destination:
+    # 
+
+    for city in city_destination: # Get the indexes
         groceries_index_destination = df[df['City'] == city]['Groceries Index'].values[0]
         restaurant_index_destination = df[df['City'] == city]['Restaurant Price Index'].values[0]
 
