@@ -15,8 +15,8 @@ st.header("💡 Itinerary Example", divider="grey")
 grid = grid([1.5, 1, 1], [1, 1, 2], 3, vertical_align="bottom")
 
 
-today = datetime.datetime.now()
-todayplusweek = today + datetime.timedelta(weeks=1)
+tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)
+tomorrowplusweek = tomorrow + datetime.timedelta(weeks=1)
 
 destination = grid.selectbox(
     "Select Destination",
@@ -25,9 +25,9 @@ destination = grid.selectbox(
 
 if destination != "":
     departure_date = grid.date_input("Select departure date",
-        (today), today,format="DD/MM/YYYY")
+        (tomorrow), tomorrow,format="DD/MM/YYYY")
     return_date = grid.date_input("Select return date",
-        (todayplusweek), today,format="DD/MM/YYYY")
+        (tomorrowplusweek), tomorrow,format="DD/MM/YYYY")
 
     colA, colB = st.columns([1, 1])
 
