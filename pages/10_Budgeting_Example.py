@@ -51,7 +51,7 @@ people = grid.number_input("Number of adults", 1, 25, step=1)
 
 flights = grid.number_input(label="Flight costs ($)", step=1)
 
-if grid.button("🔍 Budget the horizon") and city_destination != []:
+if grid.button("🔍 Budget the Horizon") and city_destination != []:
     # Assuming `df` is the DataFrame containing the data
     selected_cities = [city_origin] + city_destination
     comparison_df = df[df['City'].isin(selected_cities)][['City', 'Groceries Index', 'Restaurant Price Index']]

@@ -44,9 +44,12 @@ if destination != "":
         label_visibility="collapsed")
 
 
-    if grid.button("🔍 Search the horizon"):
-        st.write(f"Here is your {destination} itinerary for {departure_date} to {return_date}:")
-        if destination == "Byron Bay" and preferences == "Surfing":
-            st.image('images/itineraries/byron-surf.png')
-
+    if grid.button("🔍 Search the Horizon"):
+        if destination == "Canberra":
+           st.write(f"Here is your {destination} itinerary for {departure_date} to {return_date}:")
+           st.image('images/itineraries/byron-surf.png', caption="")
+        if destination == "Byron Bay":
+            st.write(f"Here is your {destination} itinerary for {departure_date} to {return_date}:")
+            st.image('images/itineraries/byron-surf.png', caption="")
+    
     hide_st.footer()
