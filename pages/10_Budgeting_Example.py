@@ -47,6 +47,9 @@ departure_date = grid.date_input("Select departure date",
 return_date = grid.date_input("Select return date",
     (todayplusweek), today,format="DD/MM/YYYY")
 
+trip_duration = return_date - departure_date
+st.write(trip_duration)
+
 people = grid.number_input("Number of adults", 1, 25, step=1)
 
 flights = grid.number_input(label="Flight costs ($)", step=1)
@@ -60,7 +63,6 @@ if grid.button("🔍 Budget the Horizon") and city_destination != []:
     groceries_index_origin = df[df['City'] == city_origin]['Groceries Index'].values[0]
     restaurant_index_origin = df[df['City'] == city_origin]['Restaurant Price Index'].values[0]
 
-    # 
 
     for city in city_destination: # Get the indexes
         groceries_index_destination = df[df['City'] == city]['Groceries Index'].values[0]
@@ -75,6 +77,10 @@ if grid.button("🔍 Budget the Horizon") and city_destination != []:
         Restaurants are **{restaurant_difference:.2f}% {'more' if restaurant_difference > 0 else 'less'} expensive** than in {city_origin.split(',')[0]}.\n
         ''')
         st.write("")
+    
+    # Cost per day estimate (to be completed)
+    
+
 else:
     st.toast("No destination selected.")
 hide_st.footer()
