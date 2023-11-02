@@ -1,5 +1,6 @@
 _What's next.txt
 .streamlit/secrets.toml
+numbeo_city.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
